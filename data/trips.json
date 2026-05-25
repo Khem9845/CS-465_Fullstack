@@ -1,26 +1,62 @@
 [
   {
+    "code": "GALR210214",
     "name": "Gale Reef",
-    "resort": "Coral Sands Resort",
     "length": "7 nights / 8 days",
-    "perPerson": "$799",
+    "start": "2021-02-14T08:00:00Z",
+    "resort": "Coral Sands Resort",
+    "perPerson": "799.00",
     "image": "reef1.jpg",
-    "description": "Gale Reef: Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida."
+    "description": "Gale Reef: Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum."
   },
   {
+    "code": "DAWR210301",
     "name": "Dawson's Reef",
-    "resort": "Blue Lagoon Resort",
     "length": "5 nights / 6 days",
-    "perPerson": "$699",
+    "start": "2021-03-01T08:00:00Z",
+    "resort": "Blue Lagoon Resort",
+    "perPerson": "699.00",
     "image": "reef2.jpg",
-    "description": "Dawson's Reef: Integer magna leo, posuere et dignissim vitae, porttitor at odio. Pellentesque a metus nec magna placerat volutpat."
+    "description": "Dawson's Reef: Integer magna leo, posuere et dignissim vitae, porttitor at odio. Pellentesque a metus nec magna placerat."
   },
   {
+    "code": "CLRR210415",
     "name": "Claire's Reef",
-    "resort": "Ocean View Resort",
     "length": "6 nights / 7 days",
-    "perPerson": "$749",
+    "start": "2021-04-15T08:00:00Z",
+    "resort": "Ocean View Resort",
+    "perPerson": "749.00",
     "image": "reef3.jpg",
-    "description": "Claire's Reef: Donec sed felis risus. Nulla facilisi. Donec a orci tellus, et auctor odio. Fusce ac orci nibh, quis semper arcu."
+    "description": "Claire's Reef: Donec sed felis risus. Nulla facilisi. Donec a orci tellus, et auctor odio. Fusce ac orci nibh."
+  },
+  {
+    "code": "ALPRNC211116",
+    "name": "Algarve Province",
+    "length": "7 nights / 8 days",
+    "start": "2021-11-16T08:00:00Z",
+    "resort": "Turquoise Bay Resort",
+    "perPerson": "1199.00",
+    "image": "algarve.jpg",
+    "description": "Algarve Province: Explore the stunning cliffs and golden beaches of Portugal's famous Algarve coast."
+  },
+  {
+    "code": "COSTR211205",
+    "name": "Costa Rica Rainforest",
+    "length": "5 nights / 6 days",
+    "start": "2021-12-05T08:00:00Z",
+    "resort": "Canopy Lodge & Retreat",
+    "perPerson": "1499.00",
+    "image": "costarica.jpg",
+    "description": "Costa Rica Rainforest: Zip-line through the jungle canopy and discover exotic wildlife in this lush paradise."
+  },
+  {
+    "code": "BALI220101",
+    "name": "Bali Retreat",
+    "length": "8 nights / 9 days",
+    "start": "2022-01-01T08:00:00Z",
+    "resort": "Sunrise Bali Resort",
+    "perPerson": "1399.00",
+    "image": "bali.jpg",
+    "description": "Bali Retreat: Experience the magic of Bali with its stunning temples, rice terraces, and beautiful beaches."
   }
 ]
