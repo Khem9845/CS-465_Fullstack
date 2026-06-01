@@ -1,4 +1,4 @@
-const Trip = require('../../app_server/models/travlr');
+const Trip = require('../models/travlr');
 
 const tripsList = async (req, res) => {
   try {
@@ -12,12 +12,12 @@ const tripsList = async (req, res) => {
   }
 };
 
-const tripsGetByCode = async (req, res) => {
+const tripsFindByCode = async (req, res) => {
   try {
     const trip = await Trip
-      .findOne({ code: req.params.tripCode })
+      .find({ code: req.params.tripCode })
       .exec();
-    if (!trip) {
+    if (!trip || trip.length === 0) {  
       return res.status(404).json({ message: 'Trip not found' });
     }
     return res.status(200).json(trip);
@@ -26,4 +26,4 @@ const tripsGetByCode = async (req, res) => {
   }
 };
 
-module.exports = { tripsList, tripsGetByCode };
+module.exports = { tripsList, tripsFindByCode };
