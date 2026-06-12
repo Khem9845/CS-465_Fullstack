@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs');
+var cors = require('cors');
 
 require('./app_api/models/db');  
 
@@ -12,6 +13,12 @@ var usersRouter = require('./app_server/routes/users');
 var apiRouter = require('./app_api/routes/index');  
 
 var app = express();
+
+// Enable CORS for Angular SPA
+app.use(cors({
+  origin: 'http://localhost:4200',
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization', 'Cache-Control', 'Pragma']
+}));
 
 app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'hbs');
