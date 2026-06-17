@@ -1,10 +1,10 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Trip } from '../models/trip';
-import { User } from '../models/user';
-import { AuthResponse } from '../models/auth-response';
-import { BROWSER_STORAGE } from '../storage';
+import { Trip } from './models/trip';
+import { User } from './models/user';
+import { AuthResponse } from './models/auth-response';
+import { BROWSER_STORAGE } from './storage';
 
 @Injectable({
   providedIn: 'root'

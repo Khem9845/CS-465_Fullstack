@@ -1,18 +1,12 @@
-import { Inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor(
-    private http: HttpClient,
-    @Inject(DOCUMENT) private document: Document
-  ) { }
-
-  private localStorage = this.document.defaultView?.localStorage;
+  constructor(private http: HttpClient) { }
 
   public login(user: any): Promise<any> {
     return this.http
@@ -27,15 +21,15 @@ export class AuthenticationService {
   }
 
   public logout(): void {
-    this.localStorage?.removeItem('travlr-token');
+    localStorage.removeItem('travlr-token');
   }
 
   public saveToken(token: string): void {
-    this.localStorage?.setItem('travlr-token', token);
+    localStorage.setItem('travlr-token', token);
   }
 
   public getToken(): string | null {
-    return this.localStorage?.getItem('travlr-token') ?? null;
+    return localStorage.getItem('travlr-token');
   }
 
   public isLoggedIn(): boolean {

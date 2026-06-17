@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="row">
+  <div class="col-12 col-md-8">
+    <h2>Login</h2>
+    <div role="alert" *ngIf="formError" class="alert alert-danger">
+      {{ formError }}
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" name="name"
+        placeholder="Enter Name"
+        [(ngModel)]="credentials.name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" name="email"
+        placeholder="Enter email address"
+        [(ngModel)]="credentials.email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" name="password"
+        placeholder="Enter password"
+        [(ngModel)]="credentials.password">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="onLoginSubmit()">
+      Sign In!
+    </button>
+  </div>
+</div>

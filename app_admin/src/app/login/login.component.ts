@@ -30,9 +30,8 @@ export class LoginComponent implements OnInit {
 
   public onLoginSubmit(): void {
     this.formError = '';
-    if (!this.credentials.email || !this.credentials.password || !this.credentials.name) {
-      this.formError = 'All fields are required, please try again';
-      this.router.navigateByUrl('#');
+    if (!this.credentials.email || !this.credentials.password) {
+      this.formError = 'Email and password are required';
     } else {
       this.doLogin();
     }
@@ -46,14 +45,12 @@ export class LoginComponent implements OnInit {
 
     this.authenticationService.login(newUser, this.credentials.password);
 
-    if (this.authenticationService.isLoggedIn()) {
-      this.router.navigate(['']);
-    } else {
-      setTimeout(() => {
-        if (this.authenticationService.isLoggedIn()) {
-          this.router.navigate(['']);
-        }
-      }, 3000);
-    }
+    setTimeout(() => {
+      if (this.authenticationService.isLoggedIn()) {
+        this.router.navigate(['']);
+      } else {
+        this.formError = 'Invalid email or password, please try again';
+      }
+    }, 1500);
   }
 }
