@@ -36,12 +36,19 @@ This course gave me hands-on experience building a complete, production-style we
 Repository Structure
 
 CS-465_Fullstack/
+
 ├── app_admin/          # Angular SPA (admin interface, port 4200)
+
 ├── app_api/            # RESTful API routes, controllers, models
+
 ├── app_server/         # Express MVC routes, controllers, views
+
 ├── public/             # Static assets (CSS, images, JS)
+
 ├── .env                # Environment variables (MongoDB URI, JWT secret)
+
 ├── app.js              # Main Express application entry point
+
 └── package.json
 
 **How to Run**
