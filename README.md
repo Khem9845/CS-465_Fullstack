@@ -53,6 +53,7 @@ CS-465_Fullstack/
 └── package.json
 
 **How to Run**
+
 Prerequisites: Node.js, MongoDB running locally
 
 powershell
